@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Learn JSON",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Learn FS",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Learn postman",
+      "completed": "false"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

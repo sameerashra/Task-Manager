@@ -1,0 +1,23 @@
+<%- include ../shared/header %>
+
+    <div class="card-columns" style="margin-top: 1%">
+    <% for(i=0;i<taskItems.length;i++){%>
+    <div class="card" style="width: 18rem; display: inline-block;">
+        <div class="card-body">
+            <% if(taskItems[i].completed) { %>
+            <div style="text-decoration: line-through">
+            <% } else { %>
+            <div>
+            <% } %>
+                <h5 class="card-title"><%=taskItems[i].title%></h5>
+                <p class="card-text"><%=taskItems[i].description%></p>
+            </div>
+          <a href="/tasks/status/<%=taskItems[i]._id%>" class="card-link"><%= taskItems[i].completed ? 'Undo' : 'Mark as Complete' %></a>
+          <a href="/tasks/delete/<%=taskItems[i]._id%>" class="card-link">Delete</a>
+        </div>
+      </div>
+      <%} %>
+    </div>
+</div>
+
+<%- include ../shared/footer %>

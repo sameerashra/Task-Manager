@@ -1,0 +1,15 @@
+<%- include ../shared/header %>
+<% if(user){ %>
+    <div class="row mt-4">
+        <div class="col">
+            <a href="/tasks" class="btn btn-primary btn-lg">Total Tasks
+                <span class="badge badge-light"><%= total %></span></a>
+            <hr />
+            <a href="/tasks" class="btn btn-success btn-lg">Completed Tasks
+                    <span class="badge badge-light"><%= completed %></span></a>            
+        </div>
+    </div>
+    <% } else { %>
+        <h1 class="jumbotron" style="text-align: center">Please Login to view tasks</h1>
+        <% } %>
+<%- include ../shared/footer %>
